@@ -2,18 +2,14 @@
 <html lang="fa" dir="rtl">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
   <title>کافه بلک | منو</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600&display=swap" rel="stylesheet">
   <style>
     :root {
       --dark: #0f0f0f;
       --darker: #0a0a0a;
       --green: #6ecb43;
       --orange: #f58220;
-      --light: #f8f8f8;
       --card-bg: #141414;
       --price-bg: rgba(110, 203, 67, 0.15);
       --border: rgba(255,255,255,0.06);
@@ -26,30 +22,30 @@
     }
 
     body {
-      font-family: 'Vazirmatn', sans-serif;
+      font-family: "Vazirmatn", "Segoe UI", Tahoma, sans-serif;
       background: var(--darker);
       color: white;
-      line-height: 1.5;
+      line-height: 1.55;
       padding: 0;
       overflow-x: hidden;
     }
 
     .container {
-      max-width: 960px;
+      max-width: 900px;
       margin: 0 auto;
-      padding: 1.8rem 1rem;
+      padding: 1.5rem 1rem;
     }
 
     header {
       text-align: center;
-      margin-bottom: 2rem;
+      margin-bottom: 1.8rem;
     }
 
     header h1 {
       font-weight: 600;
-      font-size: 2.4rem;
-      letter-spacing: -0.5px;
-      background: linear-gradient(to right, #fff, #ccc);
+      font-size: 2.1rem;
+      letter-spacing: -0.4px;
+      background: linear-gradient(to right, #fff, #ddd);
       -webkit-background-clip: text;
       background-clip: text;
       color: transparent;
@@ -57,31 +53,31 @@
     }
 
     .logo-divider {
-      width: 80px;
+      width: 70px;
       height: 2px;
       background: var(--green);
-      margin: 0.6rem auto;
+      margin: 0.5rem auto;
       border-radius: 1px;
     }
 
     .menu-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 1.4rem;
-      margin-bottom: 2rem;
+      grid-template-columns: 1fr;
+      gap: 1.3rem;
+      margin-bottom: 1.8rem;
     }
 
     .section {
       background: var(--card-bg);
-      border-radius: 10px;
+      border-radius: 12px;
       overflow: hidden;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+      box-shadow: 0 4px 14px rgba(0,0,0,0.35);
     }
 
     .section-header {
-      padding: 0.7rem 1.3rem;
+      padding: 0.8rem 1.4rem;
       font-weight: 600;
-      font-size: 1.15rem;
+      font-size: 1.2rem;
       color: var(--green);
       position: relative;
     }
@@ -90,36 +86,31 @@
       content: "";
       position: absolute;
       bottom: 0;
-      right: 1.3rem;
-      width: 30px;
+      right: 1.4rem;
+      width: 28px;
       height: 2px;
       background: var(--green);
       border-radius: 1px;
     }
 
     .items-list {
-      padding: 0.8rem 0;
+      padding: 0.7rem 0;
     }
 
     .item {
       display: flex;
       justify-content: space-between;
-      padding: 0.6rem 1.3rem;
+      padding: 0.75rem 1.4rem;
       border-bottom: 1px solid var(--border);
-      transition: background 0.2s;
     }
 
     .item:last-child {
       border-bottom: none;
     }
 
-    .item:hover {
-      background: rgba(110, 203, 67, 0.04);
-    }
-
     .item-name {
       font-weight: 500;
-      font-size: 0.95rem;
+      font-size: 1.05rem;
       flex: 1;
     }
 
@@ -127,52 +118,44 @@
       background: var(--price-bg);
       color: var(--green);
       font-weight: 600;
-      padding: 0.25rem 0.7rem;
-      border-radius: 6px;
-      min-width: 44px;
+      padding: 0.3rem 0.75rem;
+      border-radius: 7px;
+      min-width: 46px;
       text-align: center;
-      font-size: 0.9rem;
+      font-size: 1rem;
     }
 
     footer {
       text-align: center;
-      padding: 1.5rem 0 1rem;
-      margin-top: 1.5rem;
+      padding: 1.4rem 0 1rem;
+      margin-top: 1.2rem;
       border-top: 1px solid var(--border);
-      font-size: 0.9rem;
-      color: #aaa;
+      font-size: 0.95rem;
+      color: #bbb;
     }
 
     .social {
       display: inline-flex;
       align-items: center;
-      gap: 0.5rem;
-      background: rgba(245, 130, 32, 0.15);
+      gap: 0.55rem;
+      background: rgba(245, 130, 32, 0.16);
       color: var(--orange);
-      padding: 0.4rem 1rem;
-      border-radius: 30px;
+      padding: 0.45rem 1.1rem;
+      border-radius: 32px;
       font-weight: 500;
       margin-top: 0.6rem;
-      transition: all 0.2s;
-    }
-
-    .social:hover {
-      background: rgba(245, 130, 32, 0.25);
-      transform: scale(1.03);
     }
 
     .social svg {
-      width: 18px;
-      height: 18px;
+      width: 19px;
+      height: 19px;
     }
 
-    @media (max-width: 600px) {
-      .menu-grid {
-        grid-template-columns: 1fr;
-      }
-      header h1 {
-        font-size: 2rem;
-      }
+    /* فقط برای موبایل: فونت کمی بزرگ‌تر */
+    @media (max-width: 480px) {
+      .item-name { font-size: 1.1rem; }
+      .item-price { font-size: 1.05rem; min-width: 50px; }
+      header h1 { font-size: 1.9rem; }
     }
   </style>
 </head>
@@ -281,3 +264,4 @@
 </body>
 </html>
 
+  
